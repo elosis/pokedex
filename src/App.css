@@ -1,38 +1,247 @@
-.App {
-  text-align: center;
+body {
+  background-color: rgb(230, 207, 179);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.app-container {
+  /* background-image: url("/public/imagess.jpeg"); */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
-.App-link {
-  color: #61dafb;
+.poke-header-starter {
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pokename {
+  text-align: left;
+  margin-top: 2px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+}
+
+.cap {
+  align-items: center;
+  justify-content: center;
+  font-style: 16px;
+  margin-bottom: 50px;
+}
+
+.poke-container {
+  align-items: center;
+  justify-content: center;
+}
+
+.poke-header {
+  margin-bottom: 10px;
+}
+
+.poke-header-starter {
+  display: flex;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.pokemon-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pokemon {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  background-color: rgb(243, 238, 232);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.pokemon img {
+  height: 15px;
+  width: 15px;
+}
+
+.pokemon-image img {
+  height: 150px;
+  width: 150px;
+}
+
+.pokemon-button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.stats {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  background-color: rgb(243, 238, 232);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.stats-list ul {
+  list-style: none;
+  padding: 0px;
+  text-align: left;
+}
+
+.stats img {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+
+.stats-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats-button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.weaknesses {
+  margin-bottom: 5px;
+}
+
+.weaknesses-name {
+  border-style: solid;
+  border-color: rgb(107, 32, 32);
+  color: rgb(107, 32, 32);
+  font-weight: 500;
+  border-width: 1px;
+  border-radius: 5px;
+  width: 50px;
+  padding: 5px;
+  margin-bottom: 8px;
+}
+
+.details {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  background-color: rgb(243, 238, 232);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.features {
+  text-align: left;
+}
+
+.type {
+  margin-bottom: 5px;
+}
+
+.type-name {
+  border-style: solid;
+  border-color: rgb(107, 32, 32);
+  color: rgb(107, 32, 32);
+  font-weight: 500;
+  border-width: 1px;
+  border-radius: 5px;
+  width: 50px;
+  padding: 5px;
+  margin-bottom: 8px;
+}
+
+.details img {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.details-button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.evo-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.evolution-chain img {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+
+.evolution-chain {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  background-color: rgb(243, 238, 232);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.evo-button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 19px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.evo-pics-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.evo-img img {
+  height: 80px;
+  width: 80px;
+}
+
+.percentage-bar-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.percentage-bar-name {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.percentage-bar {
+  border: 1px solid #000;
+  height: 12px;
+  width: 320px;
+  margin-right: 10px;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+.percentage-bar-fill {
+  background-color: #ec9e38;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.percentage-bar-percentage {
+  font-size: 12px;
 }
