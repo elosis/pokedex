@@ -13,8 +13,6 @@ export default function DexProvider(props) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonID}`)
       .then((response) => response.json())
       .then((data) => setPokemonData(data));
-
-    console.log(pokemonData);
   }
 
   async function getPrevPokemon() {
@@ -91,7 +89,53 @@ export default function DexProvider(props) {
     );
   };
 
-  const renderStats = () => {};
+  const renderDetails = (pokemonData) => {
+    if (!pokemonData) {
+      return null;
+    }
+
+    return (
+      <div>
+        <div className="details-header">
+          <div>Details</div>
+          <div>
+            <img src="flash.png"></img>
+          </div>
+        </div>
+        <div className="features">
+          <div>
+            <div className="type">Type</div>
+            <div className="type-container">
+              {pokemonData.types.map((type) => (
+                <div className="type-name">
+                  <span key={type.name}>{type.name} </span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div>
+            <div className="weaknesses">Weaknesses</div>
+            <div className="weaknesses-container">
+              {pokemonData.weaknesses ? (
+                pokemonData.weaknesses.map((weakness) => (
+                  <div className="weaknesses-name" key={weakness}>
+                    <span>{weakness}</span>
+                  </div>
+                ))
+              ) : (
+                <div>No weaknesses found.</div>
+              )}
+            </div>
+          </div>
+        </div>
+        <div className="details-button">
+          <span onClick={getPrevPokemon}>&#60;</span>
+          <div>#0{pokemonID}</div>
+          <span onClick={getNextPokemon}>&#62;</span>
+        </div>
+      </div>
+    );
+  };
 
   const renderEvolution = (evolutionData) => {
     if (!evolutionData) {
@@ -142,6 +186,7 @@ export default function DexProvider(props) {
     getPrevPokemon,
     renderEvolution,
     renderPokemon,
+    renderDetails,
   };
 
   return (

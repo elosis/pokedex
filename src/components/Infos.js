@@ -13,7 +13,7 @@ export default function Infos() {
     <div className="stats-container">
       <Pokemon />
       <Stats id={pokemonID} />
-      <Details id={pokemonID} />
+      <Details />
       <EvolutionChain id={pokemonID} />
     </div>
   );
