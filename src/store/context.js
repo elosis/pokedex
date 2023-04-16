@@ -59,6 +59,7 @@ export default function DexProvider(props) {
     };
 
     setPokemonData(detailedData);
+    console.log(pokemonData);
     setEvolutionData(evolutionChainData.chain);
   };
 
@@ -102,6 +103,44 @@ export default function DexProvider(props) {
           ></img>
         </div>
         <div className="pokemon-button">
+          <span onClick={getPrevPokemon}>&#60;</span>
+          <div>#0{pokemonID}</div>
+          <span onClick={getNextPokemon}>&#62;</span>
+        </div>
+      </div>
+    );
+  };
+
+  const renderStats = (pokemonData) => {
+    if (!pokemonData) {
+      return null;
+    }
+
+    return (
+      <div>
+        <div className="stats-header">
+          <div>Stats</div>
+          <div>
+            <img src="wave.png"></img>
+          </div>
+        </div>
+        <div className="per-con">
+          {pokemonData.stats.map((stat) => (
+            <div className="percentage-bar-container" key={stat.stat.name}>
+              <span className="percentage-bar-name">{stat.stat.name}</span>
+              <div className="percentage-bar">
+                <div
+                  className="percentage-bar-fill"
+                  style={{ width: `${stat.base_stat}%` }}
+                ></div>
+              </div>
+              <span className="percentage-bar-percentage">
+                {stat.base_stat}
+              </span>
+            </div>
+          ))}
+        </div>
+        <div className="stats-button">
           <span onClick={getPrevPokemon}>&#60;</span>
           <div>#0{pokemonID}</div>
           <span onClick={getNextPokemon}>&#62;</span>
@@ -209,6 +248,7 @@ export default function DexProvider(props) {
     renderPokemon,
     renderDetails,
     renderPokeHeader,
+    renderStats,
   };
 
   return (

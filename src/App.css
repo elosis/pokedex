@@ -84,40 +84,6 @@ body {
   font-size: 17px;
 }
 
-.stats {
-  display: flex;
-  flex-direction: column;
-  gap: 75px;
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-  background-color: rgb(243, 238, 232);
-  border-radius: 12px;
-  padding: 10px;
-}
-
-.stats-list ul {
-  list-style: none;
-  padding: 0px;
-  text-align: left;
-}
-
-.stats img {
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-}
-
-.stats-header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.stats-button {
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-  font-size: 17px;
-}
-
 .weaknesses {
   margin-bottom: 5px;
 }
@@ -239,39 +205,78 @@ body {
   justify-content: space-around;
 }
 
-.percentage-bar-container {
+.stats {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.percentage-bar-name {
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-.percentage-bar {
-  border: 1px solid #000;
-  height: 12px;
-  width: 300px;
-  margin-right: 10px;
-  background-color: #000;
+  flex-direction: column;
+  gap: 75px;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  background-color: rgb(243, 238, 232);
   border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
-.percentage-bar-fill {
-  background-color: #ec9e38;
-  height: 100%;
-  border-radius: 10px;
+.stats img {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
 }
 
-.percentage-bar-percentage {
-  font-size: 12px;
+.stats-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats-button {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 17px;
 }
 
 .per-con {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.percentage-bar-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.percentage-bar-name {
+  width: 100px;
+  font-weight: bold;
+}
+
+.percentage-bar {
+  height: 10px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+
+.percentage-bar-fill {
+  height: 100%;
+  border-radius: 5px;
+  background-color: #4caf50;
+}
+
+.percentage-bar-percentage {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.stats-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.stats-button span {
+  cursor: pointer;
 }
