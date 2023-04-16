@@ -8,6 +8,25 @@ export default function DexProvider(props) {
   const [prevPokemonID, setPrevPokemonID] = useState(null);
   const [evolutionData, setEvolutionData] = useState(null);
 
+  async function getNextPokemon() {
+    setPokemonID(pokemonID + 1);
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonID}`)
+      .then((response) => response.json())
+      .then((data) => setPokemonData(data));
+
+    console.log(pokemonData);
+  }
+
+  async function getPrevPokemon() {
+    if (pokemonID > 1) {
+      setPrevPokemonID(pokemonID);
+      setPokemonID(pokemonID - 1);
+      fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonID}`)
+        .then((response) => response.json())
+        .then((data) => setPokemonData(data));
+    }
+  }
+
   const getPoke = async () => {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonID}`);
     const data = await res.json();
@@ -108,25 +127,6 @@ export default function DexProvider(props) {
   useEffect(() => {
     getPoke();
   }, [pokemonID]);
-
-  async function getNextPokemon() {
-    setPokemonID(pokemonID + 1);
-    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonID}`)
-      .then((response) => response.json())
-      .then((data) => setPokemonData(data));
-
-    console.log(pokemonData);
-  }
-
-  async function getPrevPokemon() {
-    if (pokemonID > 1) {
-      setPrevPokemonID(pokemonID);
-      setPokemonID(pokemonID - 1);
-      fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonID}`)
-        .then((response) => response.json())
-        .then((data) => setPokemonData(data));
-    }
-  }
 
   const data = {
     pokemonID,
