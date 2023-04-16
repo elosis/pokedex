@@ -62,6 +62,27 @@ export default function DexProvider(props) {
     setEvolutionData(evolutionChainData.chain);
   };
 
+  const renderPokeHeader = (pokemonData) => {
+    if (!pokemonData) {
+      return null;
+    }
+    return (
+      <div>
+        <div className="poke-header-starter">
+          <div>Pokémon</div>
+          <div>#0{pokemonID}</div>
+        </div>
+        <div className="pokename">
+          {pokemonData.name ? (
+            pokemonData.name
+          ) : (
+            <div> No pokemon name found</div>
+          )}
+        </div>
+      </div>
+    );
+  };
+
   const renderPokemon = (pokemonData) => {
     if (!pokemonData) {
       return null;
@@ -187,6 +208,7 @@ export default function DexProvider(props) {
     renderEvolution,
     renderPokemon,
     renderDetails,
+    renderPokeHeader,
   };
 
   return (
