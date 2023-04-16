@@ -58,6 +58,9 @@ body {
 }
 
 .pokemon {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   background-color: rgb(243, 238, 232);
   border-radius: 12px;
@@ -77,12 +80,14 @@ body {
 .pokemon-button {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
   cursor: pointer;
   font-size: 17px;
 }
 
 .stats {
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   background-color: rgb(243, 238, 232);
   border-radius: 12px;
@@ -109,7 +114,6 @@ body {
 .stats-button {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
   cursor: pointer;
   font-size: 17px;
 }
@@ -130,7 +134,15 @@ body {
   margin-bottom: 8px;
 }
 
+.weaknesses-container {
+  display: flex;
+  justify-content: space-around;
+}
+
 .details {
+  display: flex;
+  flex-direction: column;
+  gap: 95px;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   background-color: rgb(243, 238, 232);
   border-radius: 12px;
@@ -155,6 +167,11 @@ body {
   width: 50px;
   padding: 5px;
   margin-bottom: 8px;
+}
+
+.type-container {
+  display: flex;
+  gap: 10px;
 }
 
 .details img {
@@ -190,6 +207,9 @@ body {
 }
 
 .evolution-chain {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   background-color: rgb(243, 238, 232);
   border-radius: 12px;
@@ -199,7 +219,7 @@ body {
 .evo-button {
   display: flex;
   justify-content: space-between;
-  margin-top: 19px;
+  margin-top: 75px;
   cursor: pointer;
   font-size: 17px;
 }
@@ -214,12 +234,16 @@ body {
   width: 80px;
 }
 
+.evo-con {
+  display: flex;
+  justify-content: space-around;
+}
+
 .percentage-bar-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 10px;
 }
 
 .percentage-bar-name {
@@ -230,7 +254,7 @@ body {
 .percentage-bar {
   border: 1px solid #000;
   height: 12px;
-  width: 320px;
+  width: 300px;
   margin-right: 10px;
   background-color: #000;
   border-radius: 10px;
@@ -244,4 +268,10 @@ body {
 
 .percentage-bar-percentage {
   font-size: 12px;
+}
+
+.per-con {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
