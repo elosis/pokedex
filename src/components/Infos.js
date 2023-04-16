@@ -7,17 +7,11 @@ import EvolutionChain from "./EvolutionChain";
 import { DexContext, useContext } from "../store/context";
 
 export default function Infos() {
-  const { pokemonID, pokemonData } = useContext(DexContext);
+  const { pokemonID } = useContext(DexContext);
 
   return (
     <div className="stats-container">
-      <Pokemon
-        id={pokemonID}
-        image={() => {
-          return pokemonData.sprites.front_default;
-          debugger;
-        }}
-      />
+      <Pokemon />
       <Stats id={pokemonID} />
       <Details id={pokemonID} />
       <EvolutionChain id={pokemonID} />

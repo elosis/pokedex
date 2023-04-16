@@ -45,6 +45,35 @@ export default function DexProvider(props) {
     setEvolutionData(evolutionChainData.chain);
   };
 
+  const renderPokemon = (pokemonData) => {
+    if (!pokemonData) {
+      return null;
+    }
+    return (
+      <div>
+        <div className="pokemon-header">
+          <div>Picture</div>
+          <div>
+            <img src="atom.png"></img>
+          </div>
+        </div>
+        <div className="pokemon-image">
+          <img
+            src={pokemonData.sprites.front_default}
+            style={{ width: 250, height: 250 }}
+          ></img>
+        </div>
+        <div className="pokemon-button">
+          <span onClick={getPrevPokemon}>&#60;</span>
+          <div>#0{pokemonID}</div>
+          <span onClick={getNextPokemon}>&#62;</span>
+        </div>
+      </div>
+    );
+  };
+
+  const renderStats = () => {};
+
   const renderEvolution = (evolutionData) => {
     if (!evolutionData) {
       return null;
@@ -112,6 +141,7 @@ export default function DexProvider(props) {
     getNextPokemon,
     getPrevPokemon,
     renderEvolution,
+    renderPokemon,
   };
 
   return (
