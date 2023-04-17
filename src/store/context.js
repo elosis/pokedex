@@ -98,8 +98,11 @@ export default function DexProvider(props) {
         </div>
         <div className="pokemon-image">
           <img
-            src={pokemonData.sprites.front_default}
-            style={{ width: 250, height: 250 }}
+            src={pokemonData.sprites.other["official-artwork"].front_default}
+            style={{
+              width: 150,
+              height: 150,
+            }}
           ></img>
         </div>
         <div className="pokemon-button">

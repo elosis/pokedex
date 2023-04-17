@@ -4,7 +4,7 @@ body {
 
 .app-container {
   /* background-image: url("/public/imagess.jpeg"); */
-
+  /* background-color: rgb(230, 207, 179); */
   align-items: center;
   justify-content: center;
   font-family: sans-serif;
@@ -49,32 +49,30 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-gap: 30px;
+  grid-gap: 25px;
 }
 
 .pokemon-header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .pokemon {
   display: flex;
   flex-direction: column;
-  gap: 40px;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   background-color: rgb(243, 238, 232);
   border-radius: 12px;
   padding: 10px;
+  height: 300px;
+  width: 300px;
 }
 
 .pokemon img {
-  height: 15px;
-  width: 15px;
-}
-
-.pokemon-image img {
-  height: 150px;
-  width: 150px;
+  height: 30px;
+  width: 30px;
+  margin-left: auto;
 }
 
 .pokemon-button {
@@ -82,6 +80,7 @@ body {
   justify-content: space-between;
   cursor: pointer;
   font-size: 17px;
+  margin-top: 50px;
 }
 
 .weaknesses {
@@ -212,8 +211,7 @@ body {
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   background-color: rgb(243, 238, 232);
   border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
+  padding: 10px;
 }
 
 .stats img {
@@ -225,6 +223,7 @@ body {
 .stats-header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 17px;
 }
 
 .stats-button {
