@@ -193,9 +193,14 @@ export default function DexProvider(props) {
         </div>
         <div
           className="details-button"
-          // style={{
-          //   marginTop: pokemonData.weaknesses.length > 5 ? "20px" : "10px",
-          // }}
+          style={
+            pokemonData.weaknesses
+              ? {
+                  marginTop:
+                    pokemonData.weaknesses.length > 5 ? "36px" : "86px",
+                }
+              : {}
+          }
         >
           <span onClick={getPrevPokemon}>&#60;</span>
           <div>#0{pokemonID}</div>
