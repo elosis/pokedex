@@ -19,7 +19,7 @@ export default function EvoChain({ id }) {
       </div>
       <div className="evo-button">
         <span onClick={getPrevPokemon}>&#60;</span>
-        <div>#0{id}</div>
+        <div className="button-name">#0{id}</div>
         <span onClick={getNextPokemon}>&#62;</span>
       </div>
     </div>

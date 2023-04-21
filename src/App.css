@@ -3,8 +3,6 @@ body {
 }
 
 .app-container {
-  /* background-image: url("/public/imagess.jpeg"); */
-  /* background-color: rgb(230, 207, 179); */
   align-items: center;
   justify-content: center;
   font-family: sans-serif;
@@ -172,7 +170,6 @@ body {
 .evo-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
 }
 
 .evolution-chain img {
@@ -184,7 +181,7 @@ body {
 .evolution-chain {
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  justify-content: space-between;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   background-color: rgb(243, 238, 232);
   border-radius: 12px;
@@ -225,12 +222,13 @@ body {
 .stats {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 248px;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   background-color: rgb(243, 238, 232);
   border-radius: 10px;
   padding: 10px;
-  width: 750px;
+  width: 720px;
 }
 
 .stats img {
@@ -242,7 +240,6 @@ body {
 .stats-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 17px;
 }
 
 .stats-button {
@@ -253,8 +250,7 @@ body {
 }
 
 .per-con {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
 }
 
 .percentage-bar-container {
@@ -287,14 +283,6 @@ body {
   margin-left: 10px;
 }
 
-.stats-button {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-  font-size: 20px;
-}
-
 .stats-button span {
   cursor: pointer;
 }
@@ -305,4 +293,8 @@ body {
 
 .lower-container {
   display: flex;
+}
+
+.button-name {
+  font-size: 14px;
 }

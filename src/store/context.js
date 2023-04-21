@@ -107,7 +107,7 @@ export default function DexProvider(props) {
         </div>
         <div className="pokemon-button">
           <span onClick={getPrevPokemon}>&#60;</span>
-          <div>#0{pokemonID}</div>
+          <div className="button-name">#0{pokemonID}</div>
           <span onClick={getNextPokemon}>&#62;</span>
         </div>
       </div>
@@ -145,7 +145,7 @@ export default function DexProvider(props) {
         </div>
         <div className="stats-button">
           <span onClick={getPrevPokemon}>&#60;</span>
-          <div>#0{pokemonID}</div>
+          <div className="button-name">#0{pokemonID}</div>
           <span onClick={getNextPokemon}>&#62;</span>
         </div>
       </div>
@@ -190,19 +190,9 @@ export default function DexProvider(props) {
           </div>
         </div>
 
-        <div
-          className="details-button"
-          // style={
-          //   pokemonData.weaknesses
-          //     ? {
-          //         marginTop:
-          //           pokemonData.weaknesses.length > 5 ? "36px" : "86px",
-          //       }
-          //     : {}
-          // }
-        >
+        <div className="details-button">
           <span onClick={getPrevPokemon}>&#60;</span>
-          <div>#0{pokemonID}</div>
+          <div className="button-name">#0{pokemonID}</div>
           <span onClick={getNextPokemon}>&#62;</span>
         </div>
       </div>
