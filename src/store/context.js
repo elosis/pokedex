@@ -59,7 +59,6 @@ export default function DexProvider(props) {
     };
 
     setPokemonData(detailedData);
-    console.log(pokemonData);
     setEvolutionData(evolutionChainData.chain);
   };
 
@@ -134,7 +133,7 @@ export default function DexProvider(props) {
               <div className="percentage-bar">
                 <div
                   className="percentage-bar-fill"
-                  style={{ width: `${stat.base_stat}%` }}
+                  style={{ width: `${(stat.base_stat / 150) * 100}%` }}
                 ></div>
               </div>
               <span className="percentage-bar-percentage">

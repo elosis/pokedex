@@ -95,7 +95,6 @@ body {
   border-radius: 5px;
   width: 50px;
   padding: 5px;
-  margin-bottom: 8px;
   margin: 5px;
 }
 
@@ -128,6 +127,7 @@ body {
 
 .type {
   font-size: 14px;
+  margin-bottom: 7px;
 }
 
 .type-name {
@@ -141,7 +141,6 @@ body {
   border-radius: 5px;
   width: 50px;
   padding: 5px;
-  margin-bottom: 8px;
 }
 
 .type-container {
