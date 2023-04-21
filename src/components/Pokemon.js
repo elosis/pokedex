@@ -4,5 +4,5 @@ import { DexContext, useContext } from "../store/context";
 
 export default function Pokemon() {
   const { renderPokemon, pokemonData } = useContext(DexContext);
-  return <div className="pokemon">{renderPokemon(pokemonData)}</div>;
+  return <div>{renderPokemon(pokemonData)}</div>;
 }

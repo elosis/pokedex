@@ -46,25 +46,27 @@ body {
 }
 
 .stats-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .pokemon-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
 }
 
 .pokemon {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   background-color: rgb(243, 238, 232);
   border-radius: 12px;
   padding: 10px;
+  width: 220px;
+  height: 248px;
+  margin-right: 20px;
 }
 
 .pokemon img {
@@ -78,11 +80,10 @@ body {
   justify-content: space-between;
   cursor: pointer;
   font-size: 17px;
-  margin-top: 60px;
 }
 
 .weaknesses {
-  margin-bottom: 7px;
+  font-size: 14px;
 }
 
 .weaknesses-name {
@@ -90,10 +91,11 @@ body {
   border-color: rgb(107, 32, 32);
   color: rgb(107, 32, 32);
   font-weight: 500;
+  font-size: 14px;
   border-width: 1px;
   border-radius: 5px;
   width: 50px;
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 8px;
   margin: 5px;
 }
@@ -107,11 +109,14 @@ body {
 .details {
   display: flex;
   flex-direction: column;
-  /* gap: 55px; */
+  justify-content: space-between;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   background-color: rgb(243, 238, 232);
   border-radius: 12px;
   padding: 10px;
+  width: 470px;
+  height: 248px;
+  margin-right: 20px;
 }
 
 .features {
@@ -119,7 +124,7 @@ body {
 }
 
 .type {
-  margin-bottom: 7px;
+  font-size: 14px;
 }
 
 .type-name {
@@ -127,10 +132,11 @@ body {
   border-color: rgb(107, 32, 32);
   color: rgb(107, 32, 32);
   font-weight: 500;
+  font-size: 14px;
   border-width: 1px;
   border-radius: 5px;
   width: 50px;
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 8px;
 }
 
@@ -148,7 +154,6 @@ body {
 .details-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 7px;
 }
 
 .details-button {
@@ -178,6 +183,8 @@ body {
   background-color: rgb(243, 238, 232);
   border-radius: 12px;
   padding: 10px;
+  width: 470px;
+  height: 248px;
 }
 
 .evo-button {
@@ -212,11 +219,12 @@ body {
 .stats {
   display: flex;
   flex-direction: column;
-  gap: 75px;
+  height: 248px;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
   background-color: rgb(243, 238, 232);
   border-radius: 10px;
   padding: 10px;
+  width: 750px;
 }
 
 .stats img {
@@ -283,4 +291,12 @@ body {
 
 .stats-button span {
   cursor: pointer;
+}
+
+.upper-container {
+  display: flex;
+}
+
+.lower-container {
+  display: flex;
 }

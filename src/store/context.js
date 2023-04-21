@@ -89,7 +89,7 @@ export default function DexProvider(props) {
       return null;
     }
     return (
-      <div>
+      <div className="pokemon">
         <div className="pokemon-header">
           <div>Picture</div>
           <div>
@@ -120,7 +120,7 @@ export default function DexProvider(props) {
     }
 
     return (
-      <div>
+      <div className="stats">
         <div className="stats-header">
           <div>Stats</div>
           <div>
@@ -193,14 +193,14 @@ export default function DexProvider(props) {
         </div>
         <div
           className="details-button"
-          style={
-            pokemonData.weaknesses
-              ? {
-                  marginTop:
-                    pokemonData.weaknesses.length > 5 ? "36px" : "86px",
-                }
-              : {}
-          }
+          // style={
+          //   pokemonData.weaknesses
+          //     ? {
+          //         marginTop:
+          //           pokemonData.weaknesses.length > 5 ? "36px" : "86px",
+          //       }
+          //     : {}
+          // }
         >
           <span onClick={getPrevPokemon}>&#60;</span>
           <div>#0{pokemonID}</div>

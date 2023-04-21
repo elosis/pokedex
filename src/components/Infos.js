@@ -11,10 +11,14 @@ export default function Infos() {
 
   return (
     <div className="stats-container">
-      <Pokemon />
-      <Stats id={pokemonID} />
-      <Details />
-      <EvolutionChain id={pokemonID} />
+      <div className="upper-container">
+        <Pokemon />
+        <Stats id={pokemonID} />
+      </div>
+      <div className="lower-container">
+        <Details />
+        <EvolutionChain id={pokemonID} />
+      </div>
     </div>
   );
 }
