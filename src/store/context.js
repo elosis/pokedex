@@ -165,32 +165,31 @@ export default function DexProvider(props) {
             <img src="flash.png"></img>
           </div>
         </div>
-        <div className="features">
-          <div>
-            <div className="type">Type</div>
-            <div className="type-container">
-              {pokemonData.types.map((type) => (
-                <div className="type-name">
-                  <span key={type.name}>{type.name} </span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div>
-            <div className="weaknesses">Weaknesses</div>
-            <div className="weaknesses-container">
-              {pokemonData.weaknesses ? (
-                pokemonData.weaknesses.map((weakness) => (
-                  <div className="weaknesses-name" key={weakness}>
-                    <span>{weakness}</span>
-                  </div>
-                ))
-              ) : (
-                <div>No weaknesses found.</div>
-              )}
-            </div>
+        <div className="type-layer">
+          <div className="type">Type</div>
+          <div className="type-container">
+            {pokemonData.types.map((type) => (
+              <div className="type-name">
+                <span key={type.name}>{type.name} </span>
+              </div>
+            ))}
           </div>
         </div>
+        <div className="weak-layer">
+          <div className="weaknesses">Weaknesses</div>
+          <div className="weaknesses-container">
+            {pokemonData.weaknesses ? (
+              pokemonData.weaknesses.map((weakness) => (
+                <div className="weaknesses-name" key={weakness}>
+                  <span>{weakness}</span>
+                </div>
+              ))
+            ) : (
+              <div>No weaknesses found.</div>
+            )}
+          </div>
+        </div>
+
         <div
           className="details-button"
           // style={

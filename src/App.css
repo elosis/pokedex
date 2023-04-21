@@ -87,6 +87,7 @@ body {
 }
 
 .weaknesses-name {
+  text-align: center;
   border-style: solid;
   border-color: rgb(107, 32, 32);
   color: rgb(107, 32, 32);
@@ -119,7 +120,11 @@ body {
   margin-right: 20px;
 }
 
-.features {
+.type-layer {
+  text-align: left;
+}
+
+.weak-layer {
   text-align: left;
 }
 
@@ -128,6 +133,7 @@ body {
 }
 
 .type-name {
+  text-align: center;
   border-style: solid;
   border-color: rgb(107, 32, 32);
   color: rgb(107, 32, 32);
