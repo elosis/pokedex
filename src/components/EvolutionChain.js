@@ -2,7 +2,7 @@ import React from "react";
 import "../App.css";
 import { DexContext, useContext } from "../store/context";
 
-export default function Details({ id }) {
+export default function EvoChain({ id }) {
   const { renderEvolution, evolutionData, getNextPokemon, getPrevPokemon } =
     useContext(DexContext);
 
