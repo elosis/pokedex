@@ -249,18 +249,22 @@ body {
 }
 
 .per-con {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .percentage-bar-container {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
 }
 
 .percentage-bar-name {
+  text-transform: capitalize;
   width: 100px;
   font-weight: bold;
+  text-align: left;
+  font-size: 14px;
 }
 
 .percentage-bar {
