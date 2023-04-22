@@ -1,5 +1,5 @@
 import "./App.css";
-
+import React from "react";
 import PokeHeader from "./components/PokeHeader";
 import Infos from "./components/Infos";
 import Cap from "./components/Cap";
