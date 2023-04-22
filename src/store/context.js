@@ -129,7 +129,13 @@ export default function DexProvider(props) {
         <div className="per-con">
           {pokemonData.stats.map((stat) => (
             <div className="percentage-bar-container" key={stat.stat.name}>
-              <span className="percentage-bar-name">{stat.stat.name}</span>
+              <span className="percentage-bar-name">
+                {stat.stat.name === "special-attack"
+                  ? "Sp. At"
+                  : stat.stat.name === "special-defense"
+                  ? "Sp. Def"
+                  : stat.stat.name}
+              </span>
               <div className="percentage-bar">
                 <div
                   className="percentage-bar-fill"
