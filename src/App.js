@@ -4,17 +4,18 @@ import PokeHeader from "./components/PokeHeader";
 import Infos from "./components/Infos";
 import Cap from "./components/Cap";
 import DexProvider from "./store/context";
+import PokeThumbnail from "./components/PokeThumbnail";
 
 function App() {
   return (
     <DexProvider>
-      <div className="app-container">
+      <PokeThumbnail>
         <Cap />
         <div className="poke-container">
           <PokeHeader />
           <Infos />
         </div>
-      </div>
+      </PokeThumbnail>
     </DexProvider>
   );
 }
