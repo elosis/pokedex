@@ -1,5 +1,18 @@
-body {
-  background-color: rgb(230, 207, 179);
+:root {
+  --rock-color: rgb(148, 81, 81);
+  --ghost-color: rgb(247, 247, 247);
+  --electric-color: rgb(255, 255, 161);
+  --bug-color: #f6d6a7;
+  --poison-color: #e0a7f6;
+  --normal-color: #f4f4f4;
+  --fairy-color: rgba(255, 192, 203, 0.863);
+  --fire-color: #fbe3df;
+  --grass-color: #e2f9e1;
+  --water-color: #e0f1fd;
+  --ground-color: #ad721a;
+  --fighting-color: #91e4cb;
+  --psychic-color: #b4aa1e;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .app-container {
@@ -14,34 +27,34 @@ body {
 }
 
 .rock {
-  background-color: rgb(148, 81, 81);
+  background-color: var(--rock-color);
 }
 .ghost {
-  background-color: rgb(247, 247, 247);
+  background-color: var(--ghost-color);
 }
 .electric {
-  background-color: rgb(255, 255, 161);
+  background-color: var(--electric-color);
 }
 .bug {
-  background-color: #f6d6a7;
+  background-color: var(--bug-color);
 }
 .poison {
-  background-color: #e0a7f6;
+  background-color: var(--poison-color);
 }
 .normal {
-  background-color: #f4f4f4;
+  background-color: var(--normal-color);
 }
 .fairy {
-  background-color: rgba(255, 192, 203, 0.863);
+  background-color: var(--fairy-color);
 }
 .fire {
-  background-color: #fbe3df;
+  background-color: var(--fire-color);
 }
 .grass {
-  background-color: #e2f9e1;
+  background-color: var(--grass-color);
 }
 .water {
-  background-color: #e0f1fd;
+  background-color: var(--water-color);
 }
 
 .poke-header-starter {

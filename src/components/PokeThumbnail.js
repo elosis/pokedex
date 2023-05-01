@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "../App.css";
 import { DexContext } from "../store/context";
 
@@ -7,5 +7,9 @@ export default function PokeThumbnail(props) {
   const style =
     pokemonData && pokemonData.types ? pokemonData.types[0].name : "";
 
-  return <div className={`${style} app-container`}>{props.children}</div>;
+  useEffect(() => {
+    document.body.style.backgroundColor = `var(--${style}-color)`;
+  }, [style]);
+
+  return <div className={`app-container`}>{props.children}</div>;
 }
