@@ -12,18 +12,6 @@
   --ground-color: #ad721a;
   --fighting-color: #91e4cb;
   --psychic-color: #b4aa1e;
-  transition: background-color 0.5s ease-in-out;
-}
-
-.app-container {
-  align-items: center;
-  justify-content: center;
-  font-family: sans-serif;
-  text-align: center;
-  margin: 0 auto;
-  max-width: 1000px;
-
-  transition: background-color 0.5s ease-in-out;
 }
 
 .rock {
@@ -95,6 +83,16 @@
 }
 .percentage-bar-fill.psychic {
   background-color: #b4aa1e;
+}
+
+.app-container {
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1000px;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .poke-header-starter {
