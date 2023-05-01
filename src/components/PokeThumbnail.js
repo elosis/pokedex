@@ -8,7 +8,7 @@ export default function PokeThumbnail(props) {
     pokemonData && pokemonData.types ? pokemonData.types[0].name : "";
 
   useEffect(() => {
-    document.body.style.backgroundColor = `var(--${style}-color)`;
+    document.body.style.backgroundImage = `linear-gradient(to top right, var(--${style}-color), var(--normal-color))`;
   }, [style]);
 
   return <div className={`app-container`}>{props.children}</div>;
