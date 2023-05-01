@@ -138,8 +138,8 @@ export default function DexProvider(props) {
               </span>
               <div className="percentage-bar">
                 <div
-                  className="percentage-bar-fill"
-                  style={{ width: `${(stat.base_stat / 150) * 100}%` }}
+                  className={`percentage-bar-fill ${pokemonData.types[0].name}`}
+                  style={{ width: `${(stat.base_stat / 200) * 100}%` }}
                 ></div>
               </div>
               <span className="percentage-bar-percentage">

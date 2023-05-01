@@ -4,11 +4,11 @@
   --electric-color: rgb(255, 255, 161);
   --bug-color: #f6d6a7;
   --poison-color: #e0a7f6;
-  --normal-color: #f4f4f4;
+  --normal-color: #f4f4f4e7;
   --fairy-color: rgba(255, 192, 203, 0.863);
-  --fire-color: #fbe3df;
-  --grass-color: #e2f9e1;
-  --water-color: #e0f1fd;
+  --fire-color: #c22222;
+  --grass-color: #7bca78;
+  --water-color: #1c7ec4;
   --ground-color: #ad721a;
   --fighting-color: #91e4cb;
   --psychic-color: #b4aa1e;
@@ -55,6 +55,46 @@
 }
 .water {
   background-color: var(--water-color);
+}
+
+.percentage-bar-fill.electric {
+  background-color: rgb(255, 255, 161);
+}
+.percentage-bar-fill.grass {
+  background-color: #7bca78;
+}
+.percentage-bar-fill.fire {
+  background-color: #c22222;
+}
+.percentage-bar-fill.rock {
+  background-color: rgb(148, 81, 81);
+}
+.percentage-bar-fill.ghost {
+  background-color: rgb(247, 247, 247);
+}
+.percentage-bar-fill.bug {
+  background-color: #f6d6a7;
+}
+.percentage-bar-fill.poison {
+  background-color: #e0a7f6;
+}
+.percentage-bar-fill.normal {
+  background-color: #f4f4f4;
+}
+.percentage-bar-fill.fairy {
+  background-color: rgba(255, 192, 203, 0.863);
+}
+.percentage-bar-fill.water {
+  background-color: #1c7ec4;
+}
+.percentage-bar-fill.ground {
+  background-color: #ad721a;
+}
+.percentage-bar-fill.fighting {
+  background-color: #91e4cb;
+}
+.percentage-bar-fill.psychic {
+  background-color: #b4aa1e;
 }
 
 .poke-header-starter {
