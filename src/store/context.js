@@ -8,14 +8,16 @@ export default function DexProvider(props) {
   const [prevPokemonID, setPrevPokemonID] = useState(null);
   const [evolutionData, setEvolutionData] = useState(null);
 
-  async function getNextPokemon() {
+  async function getNextPokemon(e) {
+    e.preventDefault();
     setPokemonID(pokemonID + 1);
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonID}`)
       .then((response) => response.json())
       .then((data) => setPokemonData(data));
   }
 
-  async function getPrevPokemon() {
+  async function getPrevPokemon(e) {
+    e.preventDefault();
     if (pokemonID > 1) {
       setPrevPokemonID(pokemonID);
       setPokemonID(pokemonID - 1);

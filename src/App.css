@@ -14,6 +14,28 @@
   --psychic-color: #b4aa1e;
 }
 
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/4b14c981-e3c8-4be0-89fd-ee3e41ce84b1/d9rc284-605c99d0-4da6-4054-ad5a-34547bf3cd8a.png");
+  background-repeat: no-repeat;
+  background-size: 900px;
+  background-position: 1165px -140px;
+  background-attachment: fixed;
+  position: absolute;
+  top: -21px;
+  left: 0;
+  z-index: -1;
+}
+
+body {
+  width: 1920px;
+  height: 946.5px;
+  margin: 0px;
+}
+
 .rock {
   background-color: var(--rock-color);
 }
@@ -114,6 +136,7 @@
   font-style: 16px;
   font-weight: bold;
   margin-bottom: 50px;
+  margin-top: -10px;
 }
 
 .poke-container {
@@ -136,11 +159,6 @@
   gap: 20px;
 }
 
-.pokemon-header {
-  display: flex;
-  justify-content: space-between;
-}
-
 .pokemon {
   display: flex;
   flex-direction: column;
@@ -153,12 +171,6 @@
   height: 248px;
   margin-right: 20px;
   opacity: 0.8;
-}
-
-.pokemon img {
-  height: 16px;
-  width: 16px;
-  margin-left: auto;
 }
 
 .pokemon-button {
@@ -206,10 +218,7 @@
   opacity: 0.8;
 }
 
-.type-layer {
-  text-align: left;
-}
-
+.type-layer,
 .weak-layer {
   text-align: left;
 }
@@ -237,33 +246,20 @@
   gap: 10px;
 }
 
-.details img {
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-}
-
-.details-header {
+.evo-header,
+.details-header,
+.stats-header,
+.pokemon-header {
   display: flex;
   justify-content: space-between;
 }
 
-.details-button {
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-  font-size: 17px;
-}
-
-.evo-header {
-  display: flex;
-  justify-content: space-between;
-}
-
+.stats img,
+.details img,
+.pokemon img,
 .evolution-chain img {
   height: 16px;
   width: 16px;
-  border-radius: 50%;
 }
 
 .evolution-chain {
@@ -277,13 +273,6 @@
   width: 470px;
   height: 248px;
   opacity: 0.8;
-}
-
-.evo-button {
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-  font-size: 17px;
 }
 
 .evolution-container {
@@ -321,17 +310,8 @@
   opacity: 0.8;
 }
 
-.stats img {
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-}
-
-.stats-header {
-  display: flex;
-  justify-content: space-between;
-}
-
+.details-button,
+.evo-button,
 .stats-button {
   display: flex;
   justify-content: space-between;
@@ -380,10 +360,7 @@
   cursor: pointer;
 }
 
-.upper-container {
-  display: flex;
-}
-
+.upper-container,
 .lower-container {
   display: flex;
 }
