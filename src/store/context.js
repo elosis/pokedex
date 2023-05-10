@@ -64,97 +64,6 @@ export default function DexProvider(props) {
     setEvolutionData(evolutionChainData.chain);
   };
 
-  const renderStats = (pokemonData) => {
-    if (!pokemonData) {
-      return null;
-    }
-
-    return (
-      <div className="stats">
-        <div className="stats-header">
-          <div>Stats</div>
-          <div>
-            <img src="wave.png"></img>
-          </div>
-        </div>
-        <div className="per-con">
-          {pokemonData.stats.map((stat) => (
-            <div className="percentage-bar-container" key={stat.stat.name}>
-              <span className="percentage-bar-name">
-                {stat.stat.name === "special-attack"
-                  ? "Sp. At"
-                  : stat.stat.name === "special-defense"
-                  ? "Sp. Def"
-                  : stat.stat.name}
-              </span>
-              <div className="percentage-bar">
-                <div
-                  className={`percentage-bar-fill ${pokemonData.types[0].name}`}
-                  style={{ width: `${(stat.base_stat / 200) * 100}%` }}
-                ></div>
-              </div>
-              <span className="percentage-bar-percentage">
-                {stat.base_stat}
-              </span>
-            </div>
-          ))}
-        </div>
-        <div className="stats-button">
-          <span onClick={getPrevPokemon}>&#60;</span>
-          <div className="button-name">#0{pokemonID}</div>
-          <span onClick={getNextPokemon}>&#62;</span>
-        </div>
-      </div>
-    );
-  };
-
-  const renderDetails = (pokemonData) => {
-    if (!pokemonData) {
-      return null;
-    }
-
-    return (
-      <div className="details">
-        <div className="details-header">
-          <div>Details</div>
-          <div>
-            <img src="flash.png"></img>
-          </div>
-        </div>
-        <div className="type-layer">
-          <div className="type">Type</div>
-          <div className="type-container">
-            {pokemonData.types.map((type) => (
-              <div className="type-name">
-                <span key={type.name}>{type.name} </span>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="weak-layer">
-          <div className="weaknesses">Weaknesses</div>
-          <div className="weaknesses-container">
-            {pokemonData.weaknesses ? (
-              pokemonData.weaknesses.map((weakness) => (
-                <div className="weaknesses-name" key={weakness}>
-                  <span>{weakness}</span>
-                </div>
-              ))
-            ) : (
-              <div>No weaknesses found.</div>
-            )}
-          </div>
-        </div>
-
-        <div className="details-button">
-          <span onClick={getPrevPokemon}>&#60;</span>
-          <div className="button-name">#0{pokemonID}</div>
-          <span onClick={getNextPokemon}>&#62;</span>
-        </div>
-      </div>
-    );
-  };
-
   const renderEvolution = (evolutionData) => {
     if (!evolutionData) {
       return null;
@@ -253,9 +162,6 @@ export default function DexProvider(props) {
     getNextPokemon,
     getPrevPokemon,
     renderEvolution,
-    renderDetails,
-
-    renderStats,
   };
 
   return (
